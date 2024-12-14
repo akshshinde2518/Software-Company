@@ -1,0 +1,549 @@
+{% include "navbar.html" %}
+ <!-- header -->
+ <header class="header-banner">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            {% for i in sliders %}
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="header-content header-content-full">
+                    <small>{{i.slider_subtitle}}</small>
+                    <h1>{{i.slider_title}}</h1>
+                    <p>{{i.slider_details}} </p>
+                    <div class="header-button">
+                        <a href="#" class="btn no-radius">Discover More <i class="flaticon-right-arrow-2"></i></a>
+                        <a href="#" class="no-radius btn btn-border btn-border-black">Get A Quote <i class="flaticon-right-arrow-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 pb-30">
+                <div class="header-content-image text-center">
+                    <img src="/{{i.slider_image}}" alt="header">
+                    <div class="header-video-button">
+                        <a href="{{i.slider_video_link}}" id="video-popup"><i class="flaticon-play-button"></i></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        </div>
+    </div>
+</header>
+<!-- .end header -->
+<!-- feature-section -->
+<section class="feature-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <small>Our Features</small>
+            <h2>Precious Features Included With Us</h2>
+        </div>
+        <div class="row">
+            {% for i in features %}
+            <div class="col-sm-12 col-md-6 col-lg-4 pb-30">
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-card-thumb">
+                            <img src="/{{i.feature_image}} "width="100px">
+                        </div>
+                        <div class="feature-card-content">
+                            <h3>{{i.feature_title}}</h3>
+                            <p>{{i.feature_details}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+</section>
+<!-- .end feature-section -->
+<!-- about-section -->
+{% for i in about %}
+
+<section class="about-section pb-70">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-lg-6 pb-30">
+                <div class="about-item-image text-center">
+                    <img src="{{i.about_image}}" alt="about">
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 pb-10">
+                <div class="max-585 mx-auto mx-lg-0">
+                    <div class="about-item-text">
+                        <div class="section-title section-title-left text-start">
+                            <small>About Us</small>
+                            <h2>{{i.about_heading}}</h2>
+                            <p>{{i.about_details}}</p>
+                        </div>
+                        <div class="about-content-list">
+                            <div class="about-list-item">
+                                <h3><span>{{forloop.counter}}</span>{{i.about_point_1_title}}</h3>
+                                <p>{{i.about_point_1_details}}</p>
+                            </div>
+                            <div class="about-list-item">
+                                <h3><span>{{forloop.counter}}</span>{{i.about_point_2_title}}</h3>
+                                <p>{{i.about_point_2_details}}</p>
+                            </div>
+                            <div class="about-list-item">
+                                <h3><span>{{forloop.counter}}</span>{{i.about_point_3_title}}</h3>
+                                <p>{{i.about_point_3_details}}</p>
+                            </div>
+                            <div class="about-list-item">
+                                <h3><span>{{forloop.counter}}</span>{{i.about_point_4_title}}</h3>
+                                <p>{{i.about_point_4_details}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+
+<!-- .end about-section -->
+<!-- company-info-section -->
+ {% for i in counters %}
+<section class="company-info-section pb-100 bg-off-white">
+    <div class="company-info-bg extra-bottom-space">
+        <div class="container">
+            <div class="section-title position-relative section-title-white mb-0">
+                <small>Our Company</small>
+                <h2 class="m-0">The Numbers Speak for Themselves</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="company-info-box section-minus-margin border-bottom">
+            <div class="company-info-data pt-100 pb-70 bg-white position-relative">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-4 pb-30">
+                        <div class="info-item-image text-center">
+                            <img src="/{{i.counter_image}}" alt="info">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-8">
+                        <div class="counter-item-content">
+                            <div class="counter-content-list">
+                                <div class="counter-content-thumb">
+                                    <i class="flaticon-secure"></i>
+                                </div>
+                                <div class="counter-content-text">
+                                    <h3 class="color-main"><span class="counter">{{i.count_1_value}}</span> <sup>+</sup></h3>
+                                    <p>{{i.count_1_title}}</p>
+                                </div>
+                            </div>
+                            <div class="counter-content-list">
+                                <div class="counter-content-thumb">
+                                    <i class="flaticon-secure"></i>
+                                </div>
+                                <div class="counter-content-text">
+                                    <h3 class="color-main"><span class="counter">{{i.count_2_value}}</span> <sup>+</sup></h3>
+                                    <p>{{i.count_2_title}}</p>
+                                </div>
+                            </div>
+                            <div class="counter-content-list">
+                                <div class="counter-content-thumb">
+                                    <i class="flaticon-secure"></i>
+                                </div>
+                                <div class="counter-content-text">
+                                    <h3 class="color-main"><span class="counter">{{i.count_3_value}}</span> <sup>+</sup></h3>
+                                    <p>{{i.count_3_title}}</p>
+                                </div>
+                            </div>
+                            <div class="counter-content-list">
+                                <div class="counter-content-thumb">
+                                    <i class="flaticon-secure"></i>
+                                </div>
+                                <div class="counter-content-text">
+                                    <h3 class="color-main"><span class="counter">{{i.count_4_value}}</span> <sup>%</sup></h3>
+                                    <p>{{i.count_4_title}}</p>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+<!-- .end company-info-section -->
+<!-- service-section -->
+<section class="service-section p-tb-100">
+    <div class="container">
+        <div class="section-title">
+            <small>Our Services</small>
+            <h2>We Provides </h2>
+        </div>
+        <div class="service-tab-area">
+            <div class="service-grid-carousel">
+                {% for i in services %}
+                <div class="service-tab-list item 
+                {% if forloop.counter == 1 %}
+                service-tab-active
+                {% endif%}
+                "
+                 
+                data-service-tab-item="{{forloop.counter}}">
+                    <div class="service-tab-list-inner">
+                        
+                        <h4>{{i.service_title}}</h4>
+                    </div>
+                </div>
+                {% endfor %}
+               
+                
+            </div>
+            <div class="service-details-carousel">
+                {% for i in services %}
+                <div class="service-details-carousel-item"  data-service-tab-details="{{forloop.counter}}">
+                    <div class="service-tab-details row align-items-center">
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <divs class="service-details-text">
+                                <h3>{{i.service_title}}</h3>
+                                <p>{{i.service_details}}</p>
+                            </divs>
+                        </div>
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-image service-details-frame">
+                                <img src="/{{i.service_image}}" alt="service">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+               
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end service-section -->
+<!-- about-section -->
+ {% for i in challenge %}
+<section class="about-section pt-100 bg-off-white">
+    <div class="container-fluid">
+        <div class="row align-items-end">
+            <div class="col-12 order-2 order-lg-1 col-lg-4">
+                <div class="about-item-image text-center">
+                    <img src="/{{i.challenge_image}}" alt="about">
+                </div>
+            </div>
+            <div class="col-12 order-1 order-lg-2 col-lg-8 pb-70 mobile-pb-0">
+                <div class="max-910">
+                    <div class="about-item-text">
+                        <div class="section-title section-title-left text-start">
+                            <small>Our Challenge</small>
+                            <h2>{{i.challenge_title}}</h2>
+                        </div>
+                        <div class="about-content-list-two">
+                            <div class="about-list-item-two">
+                                <div class="about-list-item-selector">
+                                    <i class="flaticon-check-1"></i>
+                                </div>
+                                <div class="about-list-item-text">
+                                    <h3>{{i.challenge_1_title}}</h3>
+                                    <p>{{i.challenge_1_details}}</p>
+                                </div>
+                            </div>
+                            <div class="about-list-item-two">
+                                <div class="about-list-item-selector">
+                                    <i class="flaticon-check-1"></i>
+                                </div>
+                                <div class="about-list-item-text">
+                                    <h3>{{i.challenge_2_title}}</h3>
+                                    <p>{{i.challenge_2_details}}</p></div>
+                            </div>
+                            <div class="about-list-item-two">
+                                <div class="about-list-item-selector">
+                                    <i class="flaticon-check-1"></i>
+                                </div>
+                                <div class="about-list-item-text">
+                                    <h3>{{i.challenge_3_title}}</h3>
+                                    <p>{{i.challenge_3_details}}</p>
+                                </div>
+                            </div>
+                            <div class="about-list-item-two">
+                                <div class="about-list-item-selector">
+                                    <i class="flaticon-check-1"></i>
+                                </div>
+                                <div class="about-list-item-text">
+                                    <h3>{{i.challenge_4_title}}</h3>
+                                    <p>{{i.challenge_4_details}}</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+<!-- .end about-section -->
+<!-- service-section -->
+<div class="service-section service-bg pt-100 pb-70">
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-12 ">
+                <div class="service-product-grid">
+        {% for i in projects %}
+
+                    <div class="service-product-item">
+                        <div class="service-product-item-inner">
+                            <div class="service-top-icon">
+                                <i class="flaticon-checked"></i>
+                            </div>
+                            <div class="service-product-icon">
+                              <img src="{{i.project_image}}" width="100px" class="img">
+                            </div>
+                            <div class="service-product-text">
+                                <h3>{{i.project_title}}</h3>
+                                <p>{{i.project_details}}</p>
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .end service-section -->
+<!-- choose-section -->
+<section class="choose-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <small>All-in Solution</small>
+            <h2>Reasons You Rely On Us</h2>
+        </div>
+        <div class="choose-content-grid">
+            <div class="choose-content-item choose-content-label pb-10">
+                <div class="choose-content-inner">
+                    {% for i in wcu %}
+                    <div class="choose-label-list 
+                    {% if forloop.counter == 0 %}
+                    active 
+                    {% endif %}
+                    " data-choose-label="{{forloop.counter}}">
+                        <h4>{{i.wcu_title}}</h4>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+            <div class="choose-content-item choose-content-details pb-30">
+                <div class="choose-content-inner">
+                    {% for i in wcu %}
+
+                    <div class="choose-details-item active" data-choose-details="{{forloop.counter}}"
+                    style="background-image: url('/{{i.wcu_image}}');">
+                        <h3>{{i.wcu_title}}</h3>
+                        <p>{{i.wcu_details}}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end choose-section -->
+<!-- testimonial-section -->
+<section class="testimonial-section testimonial-bg mt-100">
+    <div class="testimonial-full-area transform-minus-100 border-bottom">
+        <div class="testimonial-full-area-inner p-tb-100">
+            <div class="container">
+                <div class="section-title">
+                    <h2>In Client’s Words</h2>
+                </div>
+                <div class="testimonial-carousel owl-carousel owl-theme">
+                    {% for i in testimonials %}
+                    <div class="item">
+                        <div class="testimonial-carousel-content">
+                            <p class="testimonial-paragraph">{{i.client_review}}</p>
+                            <div class="testimonial-client-info">
+                                <div class="testimonial-client-thumb">
+                                    <img src="/{{i.client_image}}" alt="client">
+                                </div>
+                                <div class="testimonial-client-data">
+                                    <h3 class="testimonial-name">{{i.client_name}}</h3>
+                                    <h4 class="testimonial-designation">{{i.client_position}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end testimonial-section -->
+<!-- blog-section -->
+<section class="blog-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <small>News & Blog</small>
+            <h2>Software Company Blog</h2>
+        </div>
+        <div class="row">
+            {% for i in blog %}
+
+            <div class="col-12 col-md-6 col-lg-4 pb-30">
+                <div class="blog-card blog-card-dark">
+                    <div class="blog-card-thumb">
+                        <img src="/{{i.blog_image}}" alt="blog">
+                    </div>
+                    <div class="blog-card-content">
+                        <small>{{i.blog_sub_title}}</small>
+                        <h3>{{i.blog_title}}</h3>
+                        <a href="{{i.blog_details}}" class="btn">Learn More <i class="flaticon-right-arrow-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+          
+        </div>
+    </div>
+</section>
+<!-- .end blog-section -->
+<!-- partner-section -->
+<section class="partner-section p-tb-100 bg-off-white">
+    <div class="container">
+        <div class="section-title">
+            <small>Partners</small>
+            <h2>We're Working With</h2>
+        </div>
+        <div class="partner-carousel default-carousel owl-carousel owl-theme">
+        {% for i in partners %}
+
+            <div class="item">
+
+                <div class="partner-thumb">
+                    <a href="#">
+                        <img src="/{{i.partner_logo}}" alt="partner" style="height: 100px; width: 300px;">
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+           
+        </div>
+    </div>
+</section>
+<!-- .end partner-section -->
+<!-- contact-section -->
+<section class="contact-section">
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <div class="col-12 col-md-5 p-0">
+                <div class="contact-item contact-item-dark p-tb-100 full-height">
+                    <div class="contact-item-info">
+                        <h2 class="color-white">Contact Us</h2>
+                        <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="contact-info-list">
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-phone-call"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3><a href="tel:0061-665-66785">+61 665 66785</a></h3>
+                                    <p>Call Now!</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-contact-book"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3>Level 2, 11 York St, Sydney 2000</h3>
+                                    <p>Address</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-envelope-1"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3><a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#a1c8cfc7ce93919395e1c2d8d2c4c28fc2cecc"><span class="__cf_email__" data-cfemail="70191e161f424042443013090315135e131f1d">[email&#160;protected]</span></a></h3>
+                                    <p>Email Now</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-7 p-0">
+                <div class="contact-item contact-item-details p-tb-100">
+                    <div class="contact-item-details-inner">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="name">Name*</label>
+                                            <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="phone_number">Phone*</label>
+                                            <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your phone number" class="form-control" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="email">Email Address*</label>
+                                            <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="msg_subject">Subject*</label>
+                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="message">Message</label>
+                                            <textarea name="message" class="form-control" id="message" rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="input-checkbox mb-20">
+                                        <input type="checkbox" id="contact1">
+                                        <label for="contact1">Accept <a href="terms-conditions.html">Terms & Conditions</a> and <a href="privacy-policy-2.html">Privacy Policy</a></label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <button class="btn" type="submit">
+                                        Send Message <i class="flaticon-right-arrow-2"></i>
+                                    </button>
+                                    <div id="msgSubmit"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end contact-section -->
+{% include "footer.html" %}
